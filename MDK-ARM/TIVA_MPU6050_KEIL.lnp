@@ -1,0 +1,10 @@
+--cpu=Cortex-M4.fp
+".\main.o"
+"..\Middlewares\driverlib\rvmdk\driverlib.lib"
+".\mpu6050.o"
+".\startup_tm4c123.o"
+".\system_tm4c123.o"
+--strict --scatter ".\TIVA_MPU6050_KEIL.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\TIVA_MPU6050_KEIL.map" -o .\TIVA_MPU6050_KEIL.axf
