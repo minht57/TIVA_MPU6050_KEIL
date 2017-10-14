@@ -17,11 +17,13 @@
 
 #include "MPU6050.h"
 
-//#define FILTER
+#define FILTER
 
 #ifdef FILTER
 double i16_Accel_Raw[3];
 double i16_Gyro_Raw[3];
+double i16_Kalman_Filter[3];
+double Raw;
 #else
 static int16_t i16_Accel_Raw[3];
 static int16_t i16_Gyro_Raw[3];
@@ -59,23 +61,19 @@ int main(void) {
     MPU6050_Init();
 
     while(1){
+//#ifdef FILTER
+//        MPU6050_Kalman_Angle(i16_Accel_Raw);
+//        MPU6050_Complimentary_Angle(i16_Gyro_Raw);
+//        //sprintf((char*)u8_Buf,"%f \t %f \t %f \t %f\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
+//        sprintf((char*)u8_Buf,"%f \t %f \t n\r", i16_Accel_Raw[0],roll);
+//#else
 //        MPU6050_Get_Accel_Raw(i16_Accel_Raw);
 //        MPU6050_Get_Gyro_Raw(i16_Gyro_Raw);
-//        sprintf((char*)u8_Buf,"%d %d %d _ %d %d %d\n",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Accel_Raw[2], i16_Gyro_Raw[0], i16_Gyro_Raw[1], i16_Gyro_Raw[2]);
+//        sprintf((char*)u8_Buf,"%d \t %d \t %d \t %d\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
+//#endif
+
 //        WriteSerial(u8_Buf,strlen((char*)u8_Buf));
 //        SysCtlDelay(SysCtlClockGet()/30);
-#ifdef FILTER
-        MPU6050_Kalman_Angle(i16_Accel_Raw);
-        MPU6050_Complimentary_Angle(i16_Gyro_Raw);
-        sprintf((char*)u8_Buf,"%f \t %f \t %f \t %f\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
-#else
-        MPU6050_Get_Accel_Raw(i16_Accel_Raw);
-        MPU6050_Get_Gyro_Raw(i16_Gyro_Raw);
-        sprintf((char*)u8_Buf,"%d \t %d \t %d \t %d\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
-#endif
-
-        WriteSerial(u8_Buf,strlen((char*)u8_Buf));
-        SysCtlDelay(SysCtlClockGet()/30);
     }
 	return 0;
 }

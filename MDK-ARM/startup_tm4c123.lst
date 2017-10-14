@@ -1249,7 +1249,7 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\startup_tm4c123.d -o.\startup_tm4c123.o -I.\RTE\_TIVA_MPU6050
  -ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\Software\Kei
 l_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123 --predefine="__UVISION
-_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="TM4C123GH6PM SETA 1"
+_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="TM4C123GH6PM SETA 1"
  --list=.\startup_tm4c123.lst RTE\Device\TM4C123GH6PM\startup_TM4C123.s
 
 

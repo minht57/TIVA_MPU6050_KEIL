@@ -17,7 +17,9 @@ extern "C" {
 //            |         SCL/PA6|------->
 //            |         SDA/PA7|------->
 
-#define FREQ_UPDATE         10  //Hz
+#define DEBUG
+    
+#define FREQ_UPDATE         100  //Hz
 
 #define MPU6050_I2C                 SYSCTL_PERIPH_I2C1
 #define MPU6050_I2C_GPIO            SYSCTL_PERIPH_GPIOA

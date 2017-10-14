@@ -4,6 +4,7 @@
 .\mpu6050.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\mpu6050.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\mpu6050.o: ..\Inc\MPU6050.h
+.\mpu6050.o: ..\Inc\Kalman.h
 .\mpu6050.o: ..\Middlewares\inc/tm4c123gh6pm.h
 .\mpu6050.o: ..\Middlewares\inc/hw_memmap.h
 .\mpu6050.o: ..\Middlewares\driverlib/gpio.h
