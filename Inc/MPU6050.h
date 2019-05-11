@@ -17,7 +17,7 @@ extern "C" {
 //            |         SCL/PA6|------->
 //            |         SDA/PA7|------->
 
-#define DEBUG
+// #define DEBUG
     
 #define FREQ_UPDATE         100  //Hz
 

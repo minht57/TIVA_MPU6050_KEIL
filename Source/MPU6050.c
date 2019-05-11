@@ -372,7 +372,7 @@ static void Kalman_Filter_Process(void){
         gyroXangle = kalAngleX;
     if (gyroYangle < -180 || gyroYangle > 180)
         gyroYangle = kalAngleY;
-    #ifdef DEBUG
+#ifdef DEBUG
     sprintf((char*)u8_Buf,"%d\t %d\n\r", (int32_t)(pitch*100), (int32_t)(kalAngleY*100));
 //    sprintf((char*)u8_Buf,"%d\t %d\n\r", (int32_t)(pitch), (int32_t)(kalAngleY));
     WriteSerial(u8_Buf,strlen((char*)u8_Buf));

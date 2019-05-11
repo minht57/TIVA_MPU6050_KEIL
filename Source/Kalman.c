@@ -23,8 +23,6 @@ void initKalman(Kalman *KalmanStruct)
 	(*KalmanStruct).P[1][1] = 0.0f;
 }
 
-
-
 // The angle should be in degrees and the rate should be in degrees per second and the delta time in seconds
 float getAngle(Kalman *KalmanStruct, float newAngle, float newRate, float dt)
 {

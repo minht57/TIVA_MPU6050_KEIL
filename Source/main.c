@@ -28,7 +28,7 @@ double Raw;
 static int16_t i16_Accel_Raw[3];
 static int16_t i16_Gyro_Raw[3];
 #endif
-static uint8_t u8_Buf[50];
+static uint8_t u8_Buf[100];
 
 void WriteSerial(uint8_t* c_Buff, uint16_t ui16_len)
 {
@@ -61,19 +61,19 @@ int main(void) {
     MPU6050_Init();
 
     while(1){
-//#ifdef FILTER
-//        MPU6050_Kalman_Angle(i16_Accel_Raw);
-//        MPU6050_Complimentary_Angle(i16_Gyro_Raw);
-//        //sprintf((char*)u8_Buf,"%f \t %f \t %f \t %f\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
+#ifdef FILTER
+        MPU6050_Kalman_Angle(i16_Accel_Raw);
+        MPU6050_Complimentary_Angle(i16_Gyro_Raw);
+        sprintf((char*)u8_Buf,"%f \t %f \t %f \t %f\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
 //        sprintf((char*)u8_Buf,"%f \t %f \t n\r", i16_Accel_Raw[0],roll);
-//#else
-//        MPU6050_Get_Accel_Raw(i16_Accel_Raw);
-//        MPU6050_Get_Gyro_Raw(i16_Gyro_Raw);
-//        sprintf((char*)u8_Buf,"%d \t %d \t %d \t %d\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
-//#endif
+#else
+        MPU6050_Get_Accel_Raw(i16_Accel_Raw);
+        MPU6050_Get_Gyro_Raw(i16_Gyro_Raw);
+        sprintf((char*)u8_Buf,"%d \t %d \t %d \t %d\n\r",i16_Accel_Raw[0], i16_Accel_Raw[1], i16_Gyro_Raw[0], i16_Gyro_Raw[1]);
+#endif
 
-//        WriteSerial(u8_Buf,strlen((char*)u8_Buf));
-//        SysCtlDelay(SysCtlClockGet()/30);
+        WriteSerial(u8_Buf,strlen((char*)u8_Buf));
+        SysCtlDelay(SysCtlClockGet()/30);
     }
 	return 0;
 }
