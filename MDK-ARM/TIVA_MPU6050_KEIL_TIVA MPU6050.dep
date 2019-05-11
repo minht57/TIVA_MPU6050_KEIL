@@ -1,45 +1,0 @@
-Dependencies for Project 'TIVA_MPU6050_KEIL', Target 'TIVA MPU6050': (DO NOT MODIFY !)
-F (..\Source\main.c)(0x59E1E410)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\Inc -I ..\Source -I ..\Middlewares -I ..\Middlewares\inc -I ..\Middlewares\utils -I ..\Middlewares\driverlib-I.\RTE\_TIVA_MPU6050-ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="524" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RB1-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\string.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B9154)
-I (..\Middlewares\inc/hw_ints.h)(0x59E1A83D)
-I (..\Middlewares\inc/hw_memmap.h)(0x59E1A83D)
-I (..\Middlewares\inc/hw_types.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/gpio.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/interrupt.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/pin_map.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/sysctl.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/uart.h)(0x59E1A83D)
-I (..\Inc\MPU6050.h)(0x59E1EA4E)
-F (..\Middlewares\driverlib\rvmdk\driverlib.lib)(0x59E1A83D)()
-F (..\Source\MPU6050.c)(0x59E1EA5C)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\Inc -I ..\Source -I ..\Middlewares -I ..\Middlewares\inc -I ..\Middlewares\utils -I ..\Middlewares\driverlib-I.\RTE\_TIVA_MPU6050-ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="524" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RB1-o .\mpu6050.o --omf_browse .\mpu6050.crf --depend .\mpu6050.d)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\math.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B9154)
-I (..\Inc\MPU6050.h)(0x59E1EA4E)
-I (..\Inc\Kalman.h)(0x5552404B)
-I (..\Middlewares\inc/tm4c123gh6pm.h)(0x59E1A83E)
-I (..\Middlewares\inc/hw_memmap.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/gpio.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/pin_map.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/i2c.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/sysctl.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/timer.h)(0x59E1A83D)
-I (..\Middlewares\driverlib/interrupt.h)(0x59E1A83D)
-F (..\Source\Kalman.c)(0x556EFB80)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\Inc -I ..\Source -I ..\Middlewares -I ..\Middlewares\inc -I ..\Middlewares\utils -I ..\Middlewares\driverlib-I.\RTE\_TIVA_MPU6050-ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="524" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RB1-o .\kalman.o --omf_browse .\kalman.crf --depend .\kalman.d)
-I (..\Inc\Kalman.h)(0x5552404B)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\math.h)(0x588B9154)
-F (RTE\Device\TM4C123GH6PM\startup_TM4C123.s)(0x59E1A83D)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_TIVA_MPU6050-ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (RTE\Device\TM4C123GH6PM\system_TM4C123.c)(0x59E1A83D)(--c99 -c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\Inc -I ..\Source -I ..\Middlewares -I ..\Middlewares\inc -I ..\Middlewares\utils -I ..\Middlewares\driverlib-I.\RTE\_TIVA_MPU6050-ID:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="524" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RB1-o .\system_tm4c123.o --omf_browse .\system_tm4c123.crf --depend .\system_tm4c123.d)
-I (D:\Software\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B9154)
-I (D:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EACA6)
-I (D:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550F9BDC)
-I (D:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898579A)
-I (D:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898579A)
-I (D:\Software\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898579A)
-I (D:\Software\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B69DB6)
